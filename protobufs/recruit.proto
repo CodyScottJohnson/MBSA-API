@@ -1,0 +1,21 @@
+syntax = "proto3";
+package protob;
+message Tag{
+  int32 tag_id = 1;
+  string name = 2;
+}
+message Recruit {
+  Person person = 1;
+  string email = 3;
+  string phone = 4;
+  repeated Tag tags = 5;
+}
+message Person {
+  int32 id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string primary_email = 4;
+  string primary_address = 5;
+  string primary_phone = 6;
+  string profile_pic = 7;
+}

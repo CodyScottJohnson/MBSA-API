@@ -1,0 +1,19 @@
+syntax = "proto3";
+package protob.mytest;
+message Tag2{
+  int32 tag_id = 1;
+  string name = 2;
+}
+message Recruit2 {
+  string email = 3;
+  string phone = 4;
+}
+message Person2 {
+  int32 id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string primary_email = 4;
+  string primary_address = 5;
+  string primary_phone = 6;
+  string profile_pic = 7;
+}

@@ -1,0 +1,19 @@
+//db.DropTable(&Person{}, &Email{}, &Address{})
+//db.AutoMigrate(&Person{}, &Email{}, &Address{})
+s:=models.Person{}
+z :="{ID:1,FirstName:Cody,LastName:Johnsons}"
+json.Unmarshal([]byte(z), &s)
+b2, err := json.Marshal(s)
+fmt.Println(string(b2))
+//db.Create(&p)
+//db.Update(&s)
+p := models.Person{}
+db.Where("id = ?",1).First(&p)
+b, err := json.Marshal(p)
+fmt.Println(string(b))
+
+//Testing
+go test -timeout 2s -v -short
+
+//Protobufs
+protoc --go_out=./go recruit.proto
